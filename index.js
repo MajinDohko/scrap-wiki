@@ -65,16 +65,16 @@ app.get('/', (req, res) => {
                         res.send(`
                             <h1>${tituloPagina}</h1>
                             <ul>
-                                ${informacionEnlaces.map(info => `
+                                ${informacionEnlaces.map(informacion => `
                                     <li>
-                                        <h2>${info.titulo}</h2>
-                                        <p>URL: <a href="${info.url}">${info.url}</a></p>
+                                        <h2>${informacion.titulo}</h2>
+                                        <p>URL: <a href="${informacion.url}">${informacion.url}</a></p>
                                         <p>Imágenes:</p>
                                         <ul>
-                                            ${info.imagenes.map(img => `<li><img src="${img}" alt="Imagen"></li>`).join('')}
+                                            ${informacion.imagenes.map(img => `<li><img src="${img}" alt="Imagen"></li>`).join('')}
                                         </ul>
                                         <p>Textos:</p>
-                                        <p>${info.textos.slice(0, 2).join('</p><p>')}...</p>
+                                        <p>${informacion.textos.slice(0, 2).join('</p><p>')}...</p>
                                     </li>
                                 `).join('')}
                             </ul>
@@ -91,16 +91,16 @@ app.get('/', (req, res) => {
                         res.send(`
                             <h1>${tituloPagina}</h1>
                             <ul>
-                                ${informacionEnlaces.map(info => `
+                                ${informacionEnlaces.map(informacion => `
                                     <li>
-                                        <h2>${info.titulo}</h2>
-                                        <p>URL: <a href="${info.url}">${info.url}</a></p>
+                                        <h2>${informacion.titulo}</h2>
+                                        <p>URL: <a href="${informacion.url}">${informacion.url}</a></p>
                                         <p>Imágenes:</p>
                                         <ul>
-                                            ${info.imagenes.map(img => `<li><img src="${img}" alt="Imagen"></li>`).join('')}
+                                            ${informacion.imagenes.map(img => `<li><img src="${img}" alt="Imagen"></li>`).join('')}
                                         </ul>
                                         <p>Textos:</p>
-                                        <p>${info.textos.slice(0, 2).join('</p><p>')}...</p>
+                                        <p>${informacion.textos.slice(0, 2).join('</p><p>')}...</p>
                                     </li>
                                 `).join('')}
                             </ul>
