@@ -60,7 +60,7 @@ app.get('/', (req, res) => {
 
                     enlacesProcesados++;
 
-
+                    //Imprimo una vez los enlaces están procesados o no correctamente
                     if (enlacesProcesados === enlaces.length) {
                         res.send(`
                             <h1>${tituloPagina}</h1>
@@ -83,8 +83,8 @@ app.get('/', (req, res) => {
                     //Creación de errores por si algún enlace no pudiera ser procesado
                 }).catch((error) => {
                     console.error(`Error al procesar la URL: ${enlace}`, error.mensaje);
+                    
                     enlacesProcesados++;
-
 
                     if (enlacesProcesados === enlaces.length) {
                        //Imprimo en pantalla aquella información que he extraido anteriormente
