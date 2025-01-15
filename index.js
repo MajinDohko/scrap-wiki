@@ -50,7 +50,6 @@ app.get('/', (req, res) => {
                     });
 
                     informacionEnlaces.push({
-                        url: enlace,
                         titulo,
                         imagenes,
                         textos,
@@ -66,7 +65,6 @@ app.get('/', (req, res) => {
                                 ${informacionEnlaces.map(informacion => `
                                     <li>
                                         <h2>${informacion.titulo}</h2>
-                                        <p>URL: <a href="${informacion.url}">${informacion.url}</a></p>
                                         <p>Imágenes:</p>
                                         <ul>
                                             ${informacion.imagenes.map(img => `<li><img src="${img}" alt="Imagen"></li>`).join('')}
